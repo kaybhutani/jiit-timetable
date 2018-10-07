@@ -5,7 +5,7 @@ def second(batch):
    
     index_col_2_yr="B.TECH. II Yr.(III SEMESTER TIMETABLE) ODD SEMESTER 2018(Combined) JIIT128(Effective from 17/07/2018)"
 
-    data=pd.read_excel("timetable.xlsx", index_col=index_col_2_yr)
+    data=pd.read_excel("timetable2.xlsx", index_col=index_col_2_yr)
     #sperating cols
 
     data.columns=[1,2,3,4,5,6,7,8,9]
