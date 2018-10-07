@@ -34,7 +34,7 @@ def home():
 			img=imgkit.from_file('tt.html', 'static/timetable.jpg')
 		
 		except Exception as e:
-			return ("Some error occurred, \n "+e)
+			return (("Some error occurred, \n {}").format(e))
 			
 			
 	return render_template("thanks.html",tt_dict=tt_dict)
