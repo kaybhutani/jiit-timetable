@@ -3,6 +3,8 @@ from flask import Flask,render_template,request,redirect,url_for,send_from_direc
 import os
 import imgkit
 import secondyear
+import thirdyear
+
 
 #app name
 app=Flask(__name__)
@@ -23,10 +25,20 @@ def home():
 	if request.method == 'GET':
 		return render_template("index.html")
 	elif request.method == 'POST':
-		try:
-			batch=request.form.get('batch').upper()
-			#returning dictionary from module
+		
+		year=int(request.form.get('year'))
+		batch=request.form.get('batch').upper()
+		#returning dictionary from module
+		if year==2:
 			tt_dict=secondyear.second(batch)
+		elif year==3:
+			tt_dict=thirdyear.third(batch)
+
+
+
+		try:
+
+
 			my_file_handle=open("tt.html",'w')
 			htmltext=render_template("timetable.html",tt_dict=tt_dict)
 			my_file_handle.write(htmltext)
@@ -35,6 +47,7 @@ def home():
 		
 		except Exception as e:
 			return render_template("timetable.html",tt_dict=tt_dict)
+
 
 			
 			
