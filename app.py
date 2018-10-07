@@ -2,7 +2,7 @@
 from flask import Flask,render_template,request,redirect,url_for,send_from_directory
 import os
 import imgkit
-import firstyear
+import secondyear
 
 #app name
 app=Flask(__name__)
@@ -26,7 +26,7 @@ def home():
 		try:
 			batch=request.form.get('batch').upper()
 			#returning dictionary from module
-			tt_dict=firstyear.first(batch)
+			tt_dict=secondyear.second(batch)
 			my_file_handle=open("tt.html",'w')
 			htmltext=render_template("timetable.html",tt_dict=tt_dict)
 			my_file_handle.write(htmltext)
