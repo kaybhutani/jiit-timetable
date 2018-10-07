@@ -4,6 +4,7 @@ import os
 import imgkit
 import secondyear
 import thirdyear
+import firstyear
 
 
 #app name
@@ -33,26 +34,22 @@ def home():
 			tt_dict=secondyear.second(batch)
 		elif year==3:
 			tt_dict=thirdyear.third(batch)
-
+		elif year==1:
+			tt_dict=firstyear.first(batch)
 
 
 		try:
 
 
-			my_file_handle=open("tt.html",'w')
-			htmltext=render_template("timetable.html",tt_dict=tt_dict)
-			my_file_handle.write(htmltext)
-			my_file_handle.close()
-			img=imgkit.from_file('tt.html', 'static/timetable.jpg')
-		
+			pass
 		except Exception as e:
 			return render_template("timetable.html",tt_dict=tt_dict)
 
 
 			
 			
-	return render_template("thanks.html",tt_dict=tt_dict)
-
+	
+	return render_template("timetable.html",tt_dict=tt_dict)
 
 if(__name__=='__main__'):
 	app.run(debug=True,use_reloader=True)
