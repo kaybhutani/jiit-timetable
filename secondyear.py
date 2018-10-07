@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def first(batch):
+def second(batch):
    
     index_col_2_yr="B.TECH. II Yr.(III SEMESTER TIMETABLE) ODD SEMESTER 2018(Combined) JIIT128(Effective from 17/07/2018)"
 
