@@ -5,6 +5,7 @@ import imgkit
 import secondyear
 import thirdyear
 import firstyear
+import fourthyear
 
 
 #app name
@@ -36,7 +37,8 @@ def home():
 			tt_dict=thirdyear.third(batch)
 		elif year==1:
 			tt_dict=firstyear.first(batch)
-
+		elif year==4:
+			tt_dict=fourthyear.fourth(batch)
 
 		try:
 
