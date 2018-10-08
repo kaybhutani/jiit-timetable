@@ -1,4 +1,4 @@
-<h1>Hosted at jiit.herokuapp.com</h1>
+<h1>Hosted at <a href='http://jiit.herokuapp.com/'> jiit.herokuapp.com</h1></a>
 
 JIIT TIME TABLE Extractor is based on automation with Python and Pandas
 
