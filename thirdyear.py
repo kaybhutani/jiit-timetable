@@ -44,6 +44,8 @@ def third(batch):
         for j in range(1,10):
             new=data2[i][j].dropna()
             new2=new.str.contains(batch)
+            new3=new.str.contains('ALL')
+            new2=new2|new3
             if not ((new[new2]).empty):
                 temp=new[new2].tolist()[0].replace("\n","")
                 
