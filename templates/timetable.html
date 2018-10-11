@@ -32,6 +32,33 @@ td{
 <body>
 <table class ="tableStyle" style="width:100%;">
 
+    <tr>
+        <th scope="col">Days/Time</th>
+        <th scope="col">9-9:50 AM</th>
+        <th scope="col">9:55-10:45 AM</th>
+        <th scope="col">10:50-11:40 AM</th>
+        <th scope="col">11:45-12:35 PM</th>
+        <th scope="col">12:40- 1:30 PM</th>
+        <th scope="col">1:35-2:25PM</th>
+        <th scope="col">2:30-3:20 PM</th>
+        <th scope="col">3:25-4:15 PM</th>
+        <th scope="col">04:20 -5:10 PM</th>
+    </tr>
+
+
+    <tr>
+        <td>Mon</td>
+
+        {%for i in range(0,9)%}
+
+        <td>{{tt_dict['Mon'][i]}}</td>
+        {%endfor%}
+    </tr>
+
+
+    <tr>
+        <td>Tue</td>
+
   <tr>
     <th >Days/Time</th>
     <th >9-9:50 AM</th>
@@ -46,64 +73,51 @@ td{
   </tr>
 
 
-  <tr>
-    <td>Mon</td>
+        {%for i in range(0,9)%}
 
-    {%for i in range(0,9)%}
- 
-    <td>{{tt_dict['Mon'][i]}}</td>
-{%endfor%}
-  </tr>
+        <td>{{tt_dict['Tue'][i]}}</td>
+        {%endfor%}
+    </tr>
 
 
-  <tr>
-    <td>Tue</td>
+    <tr>
+        <td>Wed</td>
 
-    {%for i in range(0,9)%}
- 
-    <td>{{tt_dict['Tue'][i]}}</td>
-{%endfor%}
-  </tr>
+        {%for i in range(0,9)%}
 
-
-  <tr>
-    <td>Wed</td>
-
-    {%for i in range(0,9)%}
- 
-    <td>{{tt_dict['Wed'][i]}}</td>
-{%endfor%}
-  </tr>
+        <td>{{tt_dict['Wed'][i]}}</td>
+        {%endfor%}
+    </tr>
 
 
-  <tr>
-    <td>Thu</td>
+    <tr>
+        <td>Thu</td>
 
-    {%for i in range(0,9)%}
- 
-    <td>{{tt_dict['Thu'][i]}}</td>
-{%endfor%}
-  </tr>
+        {%for i in range(0,9)%}
 
-
-  <tr>
-    <td>Fri</td>
-
-    {%for i in range(0,9)%}
- 
-    <td>{{tt_dict['Fri'][i]}}</td>
-{%endfor%}
-  </tr>
+        <td>{{tt_dict['Thu'][i]}}</td>
+        {%endfor%}
+    </tr>
 
 
-  <tr>
-    <td>Sat</td>
+    <tr>
+        <td>Fri</td>
 
-    {%for i in range(0,9)%}
- 
-    <td>{{tt_dict['Sat'][i]}}</td>
-{%endfor%}
-  </tr>
+        {%for i in range(0,9)%}
+
+        <td>{{tt_dict['Fri'][i]}}</td>
+        {%endfor%}
+    </tr>
+
+
+    <tr>
+        <td>Sat</td>
+
+        {%for i in range(0,9)%}
+
+        <td>{{tt_dict['Sat'][i]}}</td>
+        {%endfor%}
+    </tr>
 
 </table>
 
