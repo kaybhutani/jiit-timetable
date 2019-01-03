@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/assets/css/user.css">
+    <title>JIIT Time Table Extractor</title>
+    <style>
+
+    .time-table {
+      border-bottom: 1px solid #e7e7e7;
+    }
+
+    .table {
+      margin-bottom: 0;
+    }
+
+    th {
+      background-color: #e7e7e7;
+      border-right: 1px solid #cecece!important;
+    }
+
+    td {
+      border-right: 1px solid #cecece!important;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div>
+    <div class="time-table table-responsive" >
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Days/Time</th>
+            <th>9 - 9:50 AM</th>
+            <th>9:55 - 10:45 AM</th>
+            <th>10:50 - 11:40 AM </th>
+            <th>11:45 - 12:35 PM</th>
+            <th>12:40 - 1:30 PM</th>
+            <th>1:35 - 2:25PM</th>
+            <th>2:30 - 3:20 PM</th>
+            <th>3:25 - 4:15 PM</th>
+            <th>04:20 - 5:10 PM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="table__day">Mon</td>
+
+            {%for i in range(0,9)%}
+
+            <td>{{tt_dict['Mon'][i]}}</td>
+            {%endfor%}
+          </tr>
+
+
+          <tr>
+            <td class="table__day">Tue</td>
+
+            {%for i in range(0,9)%}
+
+            <td>{{tt_dict['Tue'][i]}}</td>
+            {%endfor%}
+          </tr>
+
+
+          <tr>
+            <td class="table__day">Wed</td>
+
+            {%for i in range(0,9)%}
+
+            <td>{{tt_dict['Wed'][i]}}</td>
+            {%endfor%}
+          </tr>
+
+
+          <tr>
+            <td class="table__day">Thu</td>
+
+            {%for i in range(0,9)%}
+
+            <td>{{tt_dict['Thu'][i]}}</td>
+            {%endfor%}
+          </tr>
+
+
+          <tr>
+            <td class="table__day">Fri</td>
+
+            {%for i in range(0,9)%}
+
+            <td>{{tt_dict['Fri'][i]}}</td>
+            {%endfor%}
+          </tr>
+
+
+          <tr>
+            <td class="table__day">Sat</td>
+            {%for i in range(0,9)%}
+
+            <td>{{tt_dict['Sat'][i]}}</td>
+            {%endfor%}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </body>
+</html>
