@@ -53,6 +53,21 @@ def home():
 	
 	return render_template("timetable.html",tt_dict=tt_dict)
 
+@app.route('/tt/<int:year>/<batch>', methods=['GET'])
+def get_task(year,batch):
+	batch=batch.upper()
+	if year==2:
+		tt_dict=secondyear.second(batch)
+	elif year==3:
+		tt_dict=thirdyear.third(batch)
+	elif year==1:
+		tt_dict=firstyear.first(batch)
+	elif year==4:
+		tt_dict=fourthyear.fourth(batch)
+	return jsonify(tt_dict)
+
+
+
 @app.route('/api/<int:year>/<batch>', methods=['GET'])
 def get_task(year,batch):
 	batch=batch.upper()
