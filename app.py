@@ -64,7 +64,7 @@ def get_task(year,batch):
 		tt_dict=firstyear.first(batch)
 	elif year==4:
 		tt_dict=fourthyear.fourth(batch)
-	return jsonify(tt_dict)
+	return render_template("timetable.html",tt_dict=tt_dict)
 
 
 
