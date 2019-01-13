@@ -3,10 +3,14 @@ import xlrd
 
 def third(batch):
    
-    index_col_2_yr="B.TECH. III Yr.  TIMETABLE ODD SEMESTER 2018 COMBINED, JIIT-128(Effective from 17/07/2018)"
+    data=pd.read_excel("timetable3.xlsx")
+    #temp data for index name
 
-    data=pd.read_excel("timetable3.xlsx", index_col=index_col_2_yr)
-    #sperating cols
+    #index col name
+    index=data.iloc[1].index[0]
+
+    #reading csv with specified index
+    data=pd.read_excel("timetable3.xlsx", index_col=index)
 
     data.columns=[1,2,3,4,5,6,7,8,9]
 
