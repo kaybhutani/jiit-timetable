@@ -54,7 +54,7 @@ def home():
 	return render_template("timetable.html",tt_dict=tt_dict)
 
 @app.route('/tt/<int:year>/<batch>', methods=['GET'])
-def get_task(year,batch):
+def tt(year,batch):
 	batch=batch.upper()
 	if year==2:
 		tt_dict=secondyear.second(batch)
@@ -66,10 +66,8 @@ def get_task(year,batch):
 		tt_dict=fourthyear.fourth(batch)
 	return render_template("timetable.html",tt_dict=tt_dict)
 
-
-
 @app.route('/api/<int:year>/<batch>', methods=['GET'])
-def get_task(year,batch):
+def api(year,batch):
 	batch=batch.upper()
 	if year==2:
 		tt_dict=secondyear.second(batch)
